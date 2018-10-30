@@ -1,4 +1,4 @@
-package br.com.senaijandira.alunosnode;
+package br.com.senaijandira.alunosnode.presenter;
 
 import android.util.Log;
 
@@ -6,6 +6,7 @@ import java.util.List;
 
 import br.com.senaijandira.alunosnode.model.Aluno;
 import br.com.senaijandira.alunosnode.service.AlunosService;
+import br.com.senaijandira.alunosnode.view.MainView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

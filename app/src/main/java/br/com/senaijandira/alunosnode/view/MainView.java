@@ -1,4 +1,4 @@
-package br.com.senaijandira.alunosnode;
+package br.com.senaijandira.alunosnode.view;
 
 import java.util.List;
 
