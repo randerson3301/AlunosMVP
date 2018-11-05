@@ -3,7 +3,6 @@ package br.com.senaijandira.alunosnode.presenter;
 import br.com.senaijandira.alunosnode.model.Aluno;
 import br.com.senaijandira.alunosnode.model.ApiResult;
 import br.com.senaijandira.alunosnode.service.AlunosService;
-import br.com.senaijandira.alunosnode.service.ServiceFactory;
 import br.com.senaijandira.alunosnode.view.CadastroView;
 import retrofit2.Callback;
 import retrofit2.Response;

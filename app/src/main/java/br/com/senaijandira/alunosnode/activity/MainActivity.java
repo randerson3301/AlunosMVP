@@ -11,13 +11,12 @@ import android.widget.ProgressBar;
 
 import java.util.List;
 
-import br.com.senaijandira.alunosnode.presenter.MainPresenter;
 import br.com.senaijandira.alunosnode.R;
 import br.com.senaijandira.alunosnode.adapter.AlunoAdapter;
 import br.com.senaijandira.alunosnode.model.Aluno;
+import br.com.senaijandira.alunosnode.presenter.MainPresenter;
 import br.com.senaijandira.alunosnode.service.ServiceFactory;
 import br.com.senaijandira.alunosnode.view.MainView;
-import okhttp3.Call;
 
 public class MainActivity extends AppCompatActivity implements MainView, AdapterView.OnItemClickListener{
 
@@ -40,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements MainView, Adapter
         pb = findViewById(R.id.progBar);
         //plugando o adapter na lista
         listView.setAdapter(adapter);
-
-        //listView.setOnClickListener(this);
+        //abre a activity de visualizar
+        listView.setOnItemClickListener(this);
 
         //config presenter
         presenter = new MainPresenter(this, ServiceFactory.create());
@@ -78,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements MainView, Adapter
     public void openCadastro(View view) {
         startActivity(new Intent(this, CadastroActivity.class));
     }
-    //Criado pela interface
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Aluno alunoSelecionado = adapter.getItem(position);
